@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --verbose --coverage --colors",
     "start": "nodemon ./server/index.js",
-    "react-dev": "webpack --watch"
+    "react-dev": "webpack --watch",
+    "seed-db": "node ./seed.js"
   },
   "jest": {
     "transform": {
