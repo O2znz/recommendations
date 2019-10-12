@@ -1,64 +1,32 @@
-// seeding file
-const faker = require('faker');
-const fs = require('fs');
-const path = require('path');
+// seed database with dummy data
+const mongoose = require('mongoose');
+const database = require('./index.js');
+const data = require('./dummy-data.json');
 
-// store path of json file to write in variable
-const dataPath = path.join(__dirname, '/dummy-data.json');
+console.log('Imported Data: ', data);
 
-// generate fake user obj
-// push each fake user obj to users array
-// write users array to dummy-data.json
-
-// fake recommendation object
-/*
-** 'id': i,
-** 'name': faker.lorem.word(),
-** 'location': faker.address.city(),
-** 'images': [faker.image.imageUrl()],
-** 'price': faker.commerce.price(),
-** 'type': faker.random.word(),
-** 'rating': faker.random.number()
-*/
-
-var generateRecommendations = () => {
-  let recommendations = [];
-
-  for (var i = 0; i < 100; i++) {
-
-    // generate fake recommendation
-    let name = faker.lorem.word();
-    let location = faker.address.city();
-    let images = faker.image.imageUrl();
-    let price = faker.commerce.price();
-    let type = faker.random.word();
-    let rating = faker.random.number();
-
-    // create and push recommendation into recommendations array
-    recommendations.push({
-      'id': i,
-      'name': name,
-      'location': location,
-      'images': images,
-      'price': price,
-      'type': type,
-      'rating': rating
-    });
-  }
-
-  return { 'data': recommendations };
+const seedDb = (data, callback) => {
+  // drop database if exists
+  // insert recommendations w/ insertMany
+  // console.log message if inserted correctly
+  database.RecommendationModel.insertMany(data, (err, data) => {
+    if (err) {
+      console.log('SEEDING ERROR: ', err);
+      callback(err);
+    } else {
+      console.log('SEEDED DATA: ', data);
+      callback(null, data);
+    }
+  });
 };
 
-let dataObj = generateRecommendations();
+mongoose.connect('mongodb://localhost/recommendations');
 
-let jsonData = JSON.stringify(dataObj, null, 2);
-
-console.log('USERS OBJECT: ', jsonData);
-
-fs.writeFile(dataPath, jsonData, 'utf8', (err) => {
-  if (err) {
-    console.log('UH-OH: ', err);
-  } else {
-    console.log('Data written to file!');
-  }
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Could not connect to DB!'));
+db.once('open', () => {
+  console.log('Connected to DB!');
+  seedDb(data, () => {
+    console.log('Database seeded!');
+  });
 });
