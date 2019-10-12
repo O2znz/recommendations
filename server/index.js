@@ -2,6 +2,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+// const faker = require('faker');
+
+// example of how faker works
+// var firstName = faker.image.imageUrl();
+// console.log(firstName);
 
 const app = express();
 

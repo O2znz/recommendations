@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const faker = require('faker');
 
 mongoose.connect('mongodb://localhost/recommendations');
 

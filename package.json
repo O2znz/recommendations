@@ -7,7 +7,7 @@
     "test": "jest --verbose --coverage --colors",
     "start": "nodemon ./server/index.js",
     "react-dev": "webpack --watch",
-    "seed-db": "node ./seed.js"
+    "seed-db": "node ./database/seed.js"
   },
   "jest": {
     "transform": {
@@ -22,6 +22,7 @@
     "body-parser": "^1.19.0",
     "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "jquery": "^3.4.1",
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.4",
