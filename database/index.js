@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-const data = require('./dummy-data.json');
+// const data = require('./dummy-data.json');
 
-mongoose.connect('mongodb://localhost/recommendations');
+// mongoose.connect('mongodb://localhost/recommendations');
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Could not connect to DB!'));
-db.once('open', () => {
-  console.log('Connected to DB!');
-});
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'Could not connect to DB!'));
+// db.once('open', () => {
+//   console.log('Connected to DB!');
+// });
 
 const recommendationSchema = mongoose.Schema({
   id: Number,
@@ -19,7 +19,7 @@ const recommendationSchema = mongoose.Schema({
   rating: Number
 });
 
-const RecommendationModel = mongoose.model('data', recommendationSchema);
+const RecommendationModel = mongoose.model('Recommendation', recommendationSchema);
 
 // var recommendation = {
 //   id: 0,

@@ -1,11 +1,34 @@
 import React from 'react';
+import data from '../../../database/dummy-data.json';
+import Axios from 'axios';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // state property goes here
+      recommendations: ''
     };
+    
+    this.getAllData = this.getAllData.bind(this);
+  }
+  
+  getAllData() {
+    Axios.get('/api/recommendations')
+      .then((res) => {
+        // console.log('API CALL: ', res.data);
+        this.setState({
+          recommendations: res.data
+        });
+      })
+      .then(() => {
+        console.log(this.state);
+      });
+  }
+
+  componentDidMount() {
+    this.getAllData();
+
   }
 
   render() {
