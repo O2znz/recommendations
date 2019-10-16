@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../../../database/dummy-data.json';
+// import data from '../../../database/dummy-data.json';
 import Axios from 'axios';
 
 
@@ -16,7 +16,7 @@ class App extends React.Component {
   getAllData() {
     Axios.get('/api/recommendations')
       .then((res) => {
-        // console.log('API CALL: ', res.data);
+        console.log('API CALL: ', res.data);
         this.setState({
           recommendations: res.data
         });
