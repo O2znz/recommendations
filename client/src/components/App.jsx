@@ -1,12 +1,13 @@
-// import react and axios
+// import react, axios, recommendations list
 import React from 'react';
 import Axios from 'axios';
+import List from './RecommendationsList.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recommendations: ''
+      recommendations: []
     };
     
     this.getAllData = this.getAllData.bind(this);
@@ -36,6 +37,7 @@ class App extends React.Component {
     return (
       <div>
         <p>Time: {this.props.time}</p>
+        <List listings={this.state.recommendations}/>
       </div>
     );
   }
