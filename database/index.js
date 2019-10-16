@@ -1,14 +1,7 @@
+// import mongoose
 const mongoose = require('mongoose');
-// const data = require('./dummy-data.json');
 
-// mongoose.connect('mongodb://localhost/recommendations');
-
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'Could not connect to DB!'));
-// db.once('open', () => {
-//   console.log('Connected to DB!');
-// });
-
+// define recommendation schema
 const recommendationSchema = mongoose.Schema({
   id: Number,
   name: String,
@@ -19,8 +12,10 @@ const recommendationSchema = mongoose.Schema({
   rating: Number
 });
 
+// initialise recommendation model
 const RecommendationModel = mongoose.model('Recommendation', recommendationSchema);
 
+// create recommendation object
 // var recommendation = {
 //   id: 0,
 //   name: 'Mi Casa',
@@ -31,8 +26,11 @@ const RecommendationModel = mongoose.model('Recommendation', recommendationSchem
 //   rating: 5
 // };
 
+// insert recommendation object into database
 // RecommendationModel.insertMany(recommendation);
+
+// export model and schema
 module.exports = {
-  RecommendationModel: RecommendationModel,
+  Recommendation: RecommendationModel,
   recommendationSchema: recommendationSchema
 };
