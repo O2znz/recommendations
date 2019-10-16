@@ -12,6 +12,7 @@ db.on('error', console.error.bind(console, 'Could not connect to DB!'));
 db.once('open', () => {
   console.log('Connected to DB!');
 });
+// find some way to close connection to database
 
 // callback function to get all recommendations from database
 const getAllData = (req, res, next) => {

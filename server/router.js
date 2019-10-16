@@ -1,12 +1,12 @@
 // import express, express.router, & controller file
 const express = require('express');
 const router = express.Router();
-const controller = require('./controller');
+const controller = require('./apiControllers');
 
 // define timeLog function to use as test
 // sends back string on req
 var timeLog = (req, res) => {
-  var time = 'I do not know the time.';
+  var time = `${Date.now()}`;
   res.send(time);
 };
 
