@@ -1,7 +1,6 @@
+// import react and axios
 import React from 'react';
-// import data from '../../../database/dummy-data.json';
 import Axios from 'axios';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +12,7 @@ class App extends React.Component {
     this.getAllData = this.getAllData.bind(this);
   }
   
+  // get all data from database and set state to data
   getAllData() {
     Axios.get('/api/recommendations')
       .then((res) => {
@@ -21,14 +21,15 @@ class App extends React.Component {
           recommendations: res.data
         });
       })
+      // log state to test state is set correctly
       .then(() => {
         console.log(this.state);
       });
   }
 
+  // call getAllData on rendering app
   componentDidMount() {
     this.getAllData();
-
   }
 
   render() {
