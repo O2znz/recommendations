@@ -4,15 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage --colors",
+    "test": "jest --verbose --coverage --colors --watchAll",
     "start": "nodemon ./server/index.js",
     "react-dev": "webpack --watch",
     "seed-db": "node ./database/seed.js"
   },
   "jest": {
+    "verbose": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
-    }
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   },
   "keywords": [],
   "author": "Parteek S. Sandhu",
@@ -41,8 +56,10 @@
     "enzyme-adapter-react-16": "^1.15.0",
     "eslint": "^6.5.1",
     "eslint-loader": "^3.0.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "nodemon": "^1.19.3",
+    "react-test-renderer": "^16.10.2",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
