@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1570818366918" clover="3.2.0">
-  <project timestamp="1570818366919" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="5" coveredelements="5" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
-    <file name="math.js" path="/Users/ParteekSSandhu/hrsf123/recommendations/math.js">
+<coverage generated="1571363801338" clover="3.2.0">
+  <project timestamp="1571363801338" name="All files">
+    <metrics statements="19" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="5" elements="29" coveredelements="17" complexity="0" loc="19" ncloc="19" packages="2" files="4" classes="4"/>
+    <package name="recommendations">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-    </file>
+      <file name="math.js" path="/Users/ParteekSSandhu/hrsf123/recommendations/math.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="recommendations.client.src.components">
+      <metrics statements="15" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
+      <file name="App.jsx" path="/Users/ParteekSSandhu/hrsf123/recommendations/client/src/components/App.jsx">
+        <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+      </file>
+      <file name="Listing.jsx" path="/Users/ParteekSSandhu/hrsf123/recommendations/client/src/components/Listing.jsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="RecommendationsList.jsx" path="/Users/ParteekSSandhu/hrsf123/recommendations/client/src/components/RecommendationsList.jsx">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
