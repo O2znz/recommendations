@@ -27,6 +27,9 @@
     ],
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
     ]
   },
   "keywords": [],

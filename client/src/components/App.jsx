@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p>Time: {this.props.time}</p>
+        <p className="time">Time: {this.props.time}</p>
         <List listings={this.state.recommendations}/>
       </div>
     );
