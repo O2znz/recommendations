@@ -9,16 +9,17 @@ const Time = styled.p`
   color: green;
 `;
 
-const Wrapper = styled.div`
-  background-color: green;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   justify-content: flex-start;
+// `;
 
 // make Recommendations styled div to encompass entire module
 // make styled title div from RecommendationsList
 // referencing style from airbnb
 const Recommendations = styled.div`
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 `;
 
 const TitleDiv = styled.div`
@@ -69,8 +70,8 @@ class App extends React.Component {
           <TitleDiv>
             <Title>
                 More homes you may like
-              <List listings={this.state.recommendations}/>
             </Title>
+            <List listings={this.state.recommendations}/>
           </TitleDiv>
         </Recommendations>
       </div>

@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// adjust margins of each listing
 const Recommendation = styled.div`
-  text-align: center;
-  color: green;
+  margin-right: 5px;
+  margin-left: 5px;
+`;
+
+const Information = styled.div`
+  margin-bottom: 16px;
+  text-align: left;
 `;
 
 const InformationDiv = styled.div`
@@ -21,11 +27,15 @@ const Image = styled.img`
 
 const Listing = (props) => {
   return (
-    <li>
-      <Recommendation>
-        <Image src={props.listing.images[0]}></Image>
+    <Recommendation>
+      <Image src={props.listing.images[0]}></Image>
+      <Information>
         <InformationDiv>
-          <TextSpan>{props.listing.type} <span> . </span> {props.listing.location}</TextSpan>
+          <TextSpan>
+            {props.listing.type}
+            <span> * </span>
+            {props.listing.location}
+          </TextSpan>
         </InformationDiv>
         <InformationDiv>
           <TextSpan>
@@ -39,11 +49,11 @@ const Listing = (props) => {
         </InformationDiv>
         <InformationDiv>
           <TextSpan>
-            (star image) {props.listing.rating}
+            (rating star) {props.listing.rating}
           </TextSpan>
         </InformationDiv>
-      </Recommendation>
-    </li>
+      </Information>
+    </Recommendation>
   );
 };
 
