@@ -1,7 +1,34 @@
 // import react, axios, recommendations list
 import React from 'react';
 import Axios from 'axios';
+import styled from 'styled-components';
 import List from './RecommendationsList.jsx';
+
+const Time = styled.p`
+  text-align: center;
+  color: green;
+`;
+
+// const Wrapper = styled.div`
+//   display: flex;
+//   justify-content: flex-start;
+// `;
+
+// make Recommendations styled div to encompass entire module
+// make styled title div from RecommendationsList
+// referencing style from airbnb
+const Recommendations = styled.div`
+  margin-top: 16px;
+  margin-bottom: 16px;
+`;
+
+const TitleDiv = styled.div`
+  margin-bottom: 24px:
+`;
+
+const Title = styled.h2`
+  tabindex: -1;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -36,8 +63,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <p className="time">Time: {this.props.time}</p>
-        <List listings={this.state.recommendations}/>
+        <Time>
+        Time: {this.props.time}
+        </Time>
+        <Recommendations>
+          <TitleDiv>
+            <Title>
+                More homes you may like
+            </Title>
+            <List listings={this.state.recommendations}/>
+          </TitleDiv>
+        </Recommendations>
       </div>
     );
   }

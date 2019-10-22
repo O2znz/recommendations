@@ -1,5 +1,12 @@
 import React from 'react';
 import Listing from './Listing.jsx';
+import styled from 'styled-components';
+
+// make flexbox container for each listing
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
 
 // make list component that pulls each object from the listings array
 // and passes each one down to the listing component (coming soon)
@@ -10,14 +17,13 @@ const RecommendationsList = (props) => {
     <Listing key={index} listing={listing} />
   );
   return (
-    <div>
-      {console.log('List Props: ', props.listings)}
-      <ul>
-        {items}
-      </ul>
-    </div>
+    <Wrapper>
+      {items}
+    </Wrapper>
   );
 };
 
 // export list
 export default RecommendationsList;
+
+// {console.log('List Props: ', props.listings)}
