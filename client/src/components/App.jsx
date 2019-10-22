@@ -4,15 +4,12 @@ import Axios from 'axios';
 import styled from 'styled-components';
 import List from './RecommendationsList.jsx';
 
+/* MOVE STYLED COMPONENTS TO STYLE SHEETS AND EXPORT THEM */
+
 const Time = styled.p`
   text-align: center;
   color: green;
 `;
-
-// const Wrapper = styled.div`
-//   display: flex;
-//   justify-content: flex-start;
-// `;
 
 // make Recommendations styled div to encompass entire module
 // make styled title div from RecommendationsList
