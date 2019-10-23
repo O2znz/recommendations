@@ -9,7 +9,7 @@ const seedDb = (data, callback) => {
   // drop database if exists
   // insert recommendations w/ insertMany
   // console.log message if inserted correctly
-  database.RecommendationModel.insertMany(data, (err, data) => {
+  database.Recommendation.insertMany(data, (err, data) => {
     if (err) {
       console.log('SEEDING ERROR: ', err);
       callback(err);
