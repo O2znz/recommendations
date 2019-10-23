@@ -27,7 +27,7 @@ const Title = styled.h2`
   tabindex: -1;
 `;
 
-class App extends React.Component {
+class Recommendation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,4 +76,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Recommendation;
