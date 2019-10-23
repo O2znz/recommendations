@@ -1,4 +1,4 @@
-// import express, express.router, & controller file
+// import express, express.router, controller file, & cors
 const express = require('express');
 const router = express.Router();
 const controller = require('./apiControllers');

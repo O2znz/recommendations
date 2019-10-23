@@ -1,8 +1,9 @@
-// require express and bodyParser
+// require express and bodyParser and cors
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const router = require('./router');
+const cors = require('cors');
 // const faker = require('faker');
 
 // example of how faker works
@@ -13,6 +14,9 @@ const router = require('./router');
 const app = express();
 
 const PORT = 3004;
+
+// use cors middleware
+app.use(cors());
 
 // use bodyParser to handle requests
 app.use(bodyParser.json());
