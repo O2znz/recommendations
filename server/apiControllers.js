@@ -16,7 +16,7 @@ db.once('open', () => {
 
 // callback function to get all recommendations from database
 const getAllData = (req, res, next) => {
-  db.collection('datas').find().toArray((err, result) => {
+  db.collection('recommendations').find().toArray((err, result) => {
     if (err) {
       return res.status(404).send(err);
     } else {
