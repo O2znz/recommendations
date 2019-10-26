@@ -1,6 +1,6 @@
 import React from 'react';
 import Listing from './Listing.jsx';
-import styled from 'styled-components';
+const styled = window.styled;
 
 // make flexbox container for each listing
 const Wrapper = styled.div`

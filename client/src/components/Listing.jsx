@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+const styled = window.styled;
 
 // adjust margins of each listing
 const Recommendation = styled.div`
