@@ -39,7 +39,7 @@ class Recommendation extends React.Component {
   
   // get all data from database and set state to data
   getAllData() {
-    Axios.get('http://localhost:3004/api/recommendations')
+    Axios.get('http://18.218.105.195:3004/api/recommendations')
       .then((res) => {
         console.log('API CALL: ', res.data);
         this.setState({
